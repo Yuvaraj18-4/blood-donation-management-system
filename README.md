@@ -38,7 +38,10 @@ Setup Instructions
 
    cd blood-donation
 3.Install dependencies
-  npm install
+
+    npm install
 4.Start the development server
- npm start
+
+   npm start
+   
 5.Open your browser and go to http://localhost:3000
