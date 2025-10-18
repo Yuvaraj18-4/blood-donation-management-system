@@ -37,6 +37,7 @@ Setup Instructions
 2.Navigate to the project folder:
 
    cd blood-donation
+   
 3.Install dependencies
 
     npm install
