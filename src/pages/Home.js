@@ -5,6 +5,15 @@ import { FaUserPlus, FaHeartbeat, FaSearch } from 'react-icons/fa';
 import { getDonors, createBloodRequest } from '../api';
 import './Home.css';
 
+// Initial verified fallback donors
+const defaultDonors = [
+  { id: 'd1', name: 'Kavya Sri', bloodType: 'A+', location: 'Hyderabad', lastDonation: '2025-08-12', mobile: '9876543210' },
+  { id: 'd2', name: 'Rahul Kumar', bloodType: 'O-', location: 'Secunderabad', lastDonation: '2025-07-20', mobile: '9123456780' },
+  { id: 'd3', name: 'Anjali Reddy', bloodType: 'B+', location: 'Hyderabad', lastDonation: '2025-09-05', mobile: '9988776655' },
+  { id: 'd4', name: 'Suresh K', bloodType: 'AB-', location: 'Hitech City', lastDonation: '2025-06-15', mobile: '9012345678' },
+  { id: 'd5', name: 'Meena P', bloodType: 'A-', location: 'Hyderabad', lastDonation: '2025-08-01', mobile: '9876512340' },
+];
+
 function Home() {
   const navigate = useNavigate();
   const [selectedBlood, setSelectedBlood] = useState('');
@@ -26,15 +35,6 @@ function Home() {
     urgency: 'Critical',
     notes: ''
   });
-
-  // Initial verified fallback donors
-  const defaultDonors = [
-    { id: 'd1', name: 'Kavya Sri', bloodType: 'A+', location: 'Hyderabad', lastDonation: '2025-08-12', mobile: '9876543210' },
-    { id: 'd2', name: 'Rahul Kumar', bloodType: 'O-', location: 'Secunderabad', lastDonation: '2025-07-20', mobile: '9123456780' },
-    { id: 'd3', name: 'Anjali Reddy', bloodType: 'B+', location: 'Hyderabad', lastDonation: '2025-09-05', mobile: '9988776655' },
-    { id: 'd4', name: 'Suresh K', bloodType: 'AB-', location: 'Hitech City', lastDonation: '2025-06-15', mobile: '9012345678' },
-    { id: 'd5', name: 'Meena P', bloodType: 'A-', location: 'Hyderabad', lastDonation: '2025-08-01', mobile: '9876512340' },
-  ];
 
   useEffect(() => {
     const fetchLiveDonors = async () => {

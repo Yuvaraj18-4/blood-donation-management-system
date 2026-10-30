@@ -13,23 +13,21 @@ L.Icon.Default.mergeOptions({
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 
+// Default fallback donors with Hyderabad coordinates
+const defaultDonors = [
+  { id: 'm1', name: "Kavya Sri", bloodType: "A+", pincode: "500001", location: "Abids", lat: 17.3850, lng: 78.4867, mobile: "9876543210" },
+  { id: 'm2', name: "Rahul Kumar", bloodType: "B+", pincode: "500034", location: "Banjara Hills", lat: 17.4156, lng: 78.4350, mobile: "9123456780" },
+  { id: 'm3', name: "Priya Sharma", bloodType: "O+", pincode: "500020", location: "Domalguda", lat: 17.4080, lng: 78.4890, mobile: "9988776655" },
+  { id: 'm4', name: "Anil Reddy", bloodType: "AB+", pincode: "500081", location: "Madhapur", lat: 17.4480, lng: 78.3900, mobile: "9012345678" },
+  { id: 'm5', name: "Meena Patel", bloodType: "O-", pincode: "500003", location: "Secunderabad", lat: 17.4399, lng: 78.4983, mobile: "9876501234" },
+];
+
 function Maps() {
   const [donors, setDonors] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({ bloodGroup: "", pincode: "" });
-
-  // Default fallback donors with Hyderabad coordinates
-  const defaultDonors = [
-    { id: 'm1', name: "Kavya Sri", bloodType: "A+", pincode: "500001", location: "Abids", lat: 17.3850, lng: 78.4867, mobile: "9876543210" },
-    { id: 'm2', name: "Rahul Kumar", bloodType: "B+", pincode: "500034", location: "Banjara Hills", lat: 17.4156, lng: 78.4350, mobile: "9123456780" },
-    { id: 'm3', name: "Priya Sharma", bloodType: "O+", pincode: "500020", location: "Domalguda", lat: 17.4080, lng: 78.4890, mobile: "9988776655" },
-    { id: 'm4', name: "Anil Reddy", bloodType: "AB+", pincode: "500081", location: "Madhapur", lat: 17.4480, lng: 78.3900, mobile: "9012345678" },
-    { id: 'm5', name: "Meena Patel", bloodType: "O-", pincode: "500003", location: "Secunderabad", lat: 17.4399, lng: 78.4983, mobile: "9876501234" },
-  ];
 
   useEffect(() => {
     const fetchLiveMapDonors = async () => {
-      setLoading(true);
       try {
         const res = await getDonors(filters.bloodGroup, filters.pincode);
         if (res.data && res.data.length > 0) {
@@ -39,8 +37,6 @@ function Maps() {
         }
       } catch (err) {
         setDonors(defaultDonors);
-      } finally {
-        setLoading(false);
       }
     };
 

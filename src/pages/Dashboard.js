@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { getCurrentUser, getRegistrations, cancelRegistration, updateProfile } from "../api";
 import "./Dashboard.css";
 
 function Dashboard() {
-  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
