@@ -1,0 +1,114 @@
+.home-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.home-header {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fdecea;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  border: none;
+  background-color: #b71c1c;
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #ff3b2e;
+}
+
+.options-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.option-card {
+  background-color: #fff0f0;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.option-card h3 {
+  color: #b71c1c;
+}
+
+.option-card .btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.option-card .btn:hover {
+  background-color: #ff3b2e;
+}
+
+.blood-chart, .nearby-donors {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.blood-chart table, .nearby-donors table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.blood-chart th, .blood-chart td, .nearby-donors th, .nearby-donors td {
+  padding: 10px;
+  border: 1px solid #b71c1c;
+}
+
+.blood-chart th, .nearby-donors th {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+.quote-section {
+  text-align: center;
+  margin: 50px 20px;
+  font-size: 1.3rem;
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+.home-footer {
+  text-align: center;
+  background-color: #fdecea;
+  padding: 20px;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+.nearby-donors select {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}

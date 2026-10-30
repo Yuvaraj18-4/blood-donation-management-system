@@ -1,0 +1,164 @@
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fc;
+  min-height: 100vh;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome h2 {
+  color: #b71c1c;
+  font-size: 2rem;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  flex: 1 1 200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #eee;
+  height: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  background-color: #b71c1c;
+  height: 100%;
+  border-radius: 6px;
+  width: 0%; /* Dynamically updated */
+  transition: width 0.5s ease-in-out;
+}
+
+/* Upcoming Appointments */
+.upcoming-appointments {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.upcoming-appointments h4 {
+  color: #b71c1c;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+/* Appointment List */
+.upcoming-appointments ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each appointment as a grid row */
+.upcoming-appointments li {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 2fr;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8d7da;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.upcoming-appointments li span {
+  font-weight: 600;
+  color: #333;
+}
+
+.upcoming-appointments li strong {
+  color: #b71c1c;
+}
+
+/* Actions */
+.appointment-actions button {
+  margin-left: 8px;
+}
+
+.btn {
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+}
+
+.btn-small {
+  padding: 5px 12px;
+  font-size: 0.9rem;
+}
+
+.btn.cancel {
+  background-color: #888;
+}
+
+.btn.cancel:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-cards {
+    flex-direction: column;
+  }
+  .upcoming-appointments li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .appointment-actions button {
+    margin-left: 0;
+  }
+}
